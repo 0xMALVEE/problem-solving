@@ -4,8 +4,6 @@
 
 In this Repo I store all My Competitive Programming Codes
 
-## .CPP ( All files in C++)
-
 C++ TEMPLATE (BAISC)
 ```cpp
 #include <bits/stdc++.h>
