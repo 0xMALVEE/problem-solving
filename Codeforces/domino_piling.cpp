@@ -21,14 +21,9 @@ public:
     void solve(std::istream& in, std::ostream& out) {
         int m, n;
         in >> m >> n;
-       
 
-        if (m * n % 2 == 0) {
-            cout << (m * n) / 2 ;
-        }
-        else {
-            cout << (m * n)/2 ;
-        }
+        cout << (m * n)/2 ;
+       
     }
 };
 
