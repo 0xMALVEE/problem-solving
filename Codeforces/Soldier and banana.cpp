@@ -9,36 +9,30 @@
 #include <string>
 #include <utility>
 #include <vector>
-#include <iostream>
 #include <fstream>
-
+#include <iostream>
 
 using namespace std;
-
-
 
 class Solution {
 public:
     void solve(std::istream& in, std::ostream& out) {
-        int tc;
-        in >> tc;
+        int k, n, w;
+        in >> k >> n >> w;
 
-        for (int i = 0; i < tc; i++) {
-            long long a, b, c;
-            in >> a >> b >> c;
+        int tp = 0;
 
-            long long a1 = abs(b - c) + abs(c - 1);
-            long long a2 = abs(a - 1);
-
-            if (a1 > a2) {
-                out << 1 << endl;
-            }
-
-            else if (a1 < a2) { out << 2 << endl; }
-            else { out << 3 << endl; }
+        for (int i = 1; i <= w; i++) {
+            tp += i * k;
         }
 
-      
+        if (tp - n >= 0) {
+            out << tp - n;
+        }
+        else {
+            out << 0;
+        }
+        
     }
 };
 
