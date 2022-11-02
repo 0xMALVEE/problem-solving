@@ -9,36 +9,50 @@
 #include <string>
 #include <utility>
 #include <vector>
-#include <iostream>
 #include <fstream>
+#include <iostream>
 
 
 using namespace std;
-
+// Powered by caide (code generator, tester, and library code inliner)
 
 
 class Solution {
 public:
     void solve(std::istream& in, std::ostream& out) {
-        int tc;
-        in >> tc;
+		int tc;
+		in >> tc;
+		while (tc--) {
+			int n;
+			in >> n;
+			string s;
+			in >> s;
 
-        for (int i = 0; i < tc; i++) {
-            long long a, b, c;
-            in >> a >> b >> c;
+			int q = 0;
+			int a = 0;
+			if (s[n - 1] != 'A') {
+				out << "No" << endl;
+			}
+			else {
 
-            long long a1 = abs(b - c) + abs(c - 1);
-            long long a2 = abs(a - 1);
+				for (int i = 0; i < n; i++) {
+					if (s[i] == 'Q') {
+						q++;
+					}
+					else {
+						a++;
+					}
+				}
+				if (q > a) {
+					out << "No" << endl;
+				}
+				else {
+					out << "Yes" << endl;
+				}
+			}
+			
+		}
 
-            if (a1 > a2) {
-                out << 1 << endl;
-            }
-
-            else if (a1 < a2) { out << 2 << endl; }
-            else { out << 3 << endl; }
-        }
-
-      
     }
 };
 
