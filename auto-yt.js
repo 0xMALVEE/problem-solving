@@ -9,7 +9,7 @@ if (s) {
     for (const childElement of childElements) {
       const itemName = childElement.firstElementChild.textContent;
 
-      if (itemName.includes("programming") || itemName.includes("computer")) {
+      if (itemName.toLowerCase().includes("programming") || itemName.toLowerCase().includes("computer")) {
 console.log(          childElement)
 childElement.click();
       }
